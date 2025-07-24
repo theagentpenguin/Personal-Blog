@@ -1,3 +1,14 @@
-*{
-    background-color: #A47864
+
+
+#logo-black{
+    color: black;
+}
+
+.logo-text {
+    color: crimson;
+}
+nav{
+    display: flex;
+    background: #ffe135;
+    align-items: right;
 }
