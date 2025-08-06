@@ -9,6 +9,26 @@
 }
 nav{
     display: flex;
+    height: 10%;
     background: #ffe135;
     align-items: right;
+}
+
+#create-button{
+    width:120px;
+    height: 40px;
+
+}
+
+nav.li{
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.blog-body {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    border: 1px solid black;
+
 }
