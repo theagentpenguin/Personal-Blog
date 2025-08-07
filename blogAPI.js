@@ -19,6 +19,10 @@ app.get('/posts',(req, res)=>{
     res.json(blogList);
 });
 
+app.post(){
+    
+}
+
 app.listen(PORT, function(){
     console.log("The API server is up");
 });

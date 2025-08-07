@@ -9,11 +9,22 @@
 }
 nav{
     display: flex;
+    flex-direction: row;
     height: 10%;
     background: #ffe135;
     align-items: right;
+    
 }
-
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    
+    display: flex;
+}
+li{
+    text-decoration: none;
+}
 #create-button{
     width:120px;
     height: 40px;

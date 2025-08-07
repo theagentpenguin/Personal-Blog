@@ -1,12 +1,8 @@
-//import fs from 'fs';
 
-let blogList =[];
 
-// const fileExists = fs.existsSync('blogList.json');
-// if(!fileExists){
-//     fs.writeFileSync('blogList.json',JSON.stringify(blogList),'utf8');
-// }
-
+const form = document.getElementById('blog-post-form');
+console.log(form);
 function addBlog(){
     console.log("the button has been clicked!");
+    fetch('http://localhost:8080/posts');
 }
