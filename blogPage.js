@@ -25,3 +25,21 @@ document.getElementById('blog-post-form').addEventListener('submit', function(ev
       console.log('Server response:', data);
     });
 });
+// ... (your existing script content) ...
+
+document.getElementById("view-all").onclick = () => {
+    fetch('http://localhost:8080/posts',{
+        method: 'GET'
+
+    })
+    .then(response => response.json())
+    .then(posts=>{
+        posts.forEach(post =>{
+          
+        })
+        const viewArea = document.getElementById('view-area');
+        viewArea.innerHTML = `<p>${blogData}</p>`
+
+    })
+
+};

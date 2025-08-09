@@ -5,7 +5,10 @@ const PORT = 8080;
 const cors = require('cors');
 app.use(cors());
 app.use(express.json());
-var blogList = [];
+
+const fileContent = fs.readFileSync('blogList.json','utf8');
+let blogList = JSON.parse(fileContent);
+//var  = [];
 const fileName = 'blogList.json';
 
 
@@ -23,6 +26,10 @@ function loadData(){
     blogList.push(...existingItems);
     fs.writeFileSync('blogList.json',JSON.stringify(blogList,null,2),'utf8');
 }
+
+app.get('/',(req,res)=>{
+    res.json(blogList);
+})
 
 app.post('/posts', (req, res) => {
   // Extract data sent from the form
