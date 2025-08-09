@@ -28,18 +28,25 @@ document.getElementById('blog-post-form').addEventListener('submit', function(ev
 // ... (your existing script content) ...
 
 document.getElementById("view-all").onclick = () => {
-    fetch('http://localhost:8080/posts',{
+    fetch('http://localhost:8080/',{
         method: 'GET'
 
     })
     .then(response => response.json())
     .then(posts=>{
-        posts.forEach(post =>{
-          
-        })
         const viewArea = document.getElementById('view-area');
-        viewArea.innerHTML = `<p>${blogData}</p>`
+        viewArea.innerHTML = '';
+        
+        posts.forEach(post =>{
+        const div = document.createElement('div');
+        div.classList.add('post-item');
+        div.innerHTML=`<h3>${post.title}</h3>
+        <p>${post.content}</p>
+        `;
+        viewArea.appendChild(div);
+        });
+        
 
-    })
+    });
 
 };
