@@ -38,13 +38,15 @@ document.getElementById("view-all").onclick = () => {
         viewArea.innerHTML = '';
         
         posts.forEach(post =>{
+        
         const div = document.createElement('div');
         div.classList.add('post-item');
         div.innerHTML=`<h3>${post.title}</h3>
-        <p>${post.content}</p>
-        `;
+        <p>${post.content}</p>`;
+        window.location.href = 'post.html';
         viewArea.appendChild(div);
-        });
+        
+      });
         
 
     });

@@ -27,7 +27,7 @@ function loadData(){
     fs.writeFileSync('blogList.json',JSON.stringify(blogList,null,2),'utf8');
 }
 
-app.get('/',(req,res)=>{
+app.get('/',(req, res)=>{
     res.json(blogList);
 })
 
